@@ -88,14 +88,22 @@ WSGI_APPLICATION = 'verbiqserver.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',  # Replace with your actual database name
+#         'USER': 'postgres',  # Replace with your PostgreSQL username provided by Railway
+#         'PASSWORD': 'xyxQmjQPDyZeQHzgdrJcEnFRHjdaZIVC',  # Replace with your PostgreSQL password provided by Railway
+#         'HOST': 'monorail.proxy.rlwy.net',  # Replace with your PostgreSQL host provided by Railway
+#         'PORT': '29623',  # Replace with your PostgreSQL port provided by Railway
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',  # Replace with your actual database name
-        'USER': 'postgres',  # Replace with your PostgreSQL username provided by Railway
-        'PASSWORD': 'xyxQmjQPDyZeQHzgdrJcEnFRHjdaZIVC',  # Replace with your PostgreSQL password provided by Railway
-        'HOST': 'monorail.proxy.rlwy.net',  # Replace with your PostgreSQL host provided by Railway
-        'PORT': '29623',  # Replace with your PostgreSQL port provided by Railway
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
